@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://nl.linkedin.com/in/jari-kooij",
+        "img": "/icons/linkedin.svg"
+    },
+    {
+        "url": "https://github.com/JariKooij",
+        "img": "/icons/github.svg"
+    },
+    {
+        "url": "mailto:jarikooij.dev@gmail.com",
+        "img": "/icons/mail.svg"
+    }
+]

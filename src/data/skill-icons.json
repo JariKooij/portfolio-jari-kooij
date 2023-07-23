@@ -1,0 +1,31 @@
+[
+    {
+        "title": "React",
+        "url": "/icons/skills/react.svg"
+    },
+    {
+        "title": "Next.js",
+        "url": "/icons/skills/nextjs.svg"
+    },
+    {
+        "title": "TypeScript",
+        "url": "/icons/skills/ts.svg"
+    },
+
+    {
+        "title": "SCSS",
+        "url": "/icons/skills/scss.svg"
+    },
+    {
+        "title": "Tailwind",
+        "url": "/icons/skills/tailwind.svg"
+    },
+    {
+        "title": "Figma",
+        "url": "/icons/skills/figma.svg"
+    },
+    {
+        "title": "PhotoShop",
+        "url": "/icons/skills/ps.svg"
+    }
+]
