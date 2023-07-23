@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import { Fira_Code } from "next/font/google";
 
 import Navbar from "@/components/layout/Navbar";
@@ -13,7 +13,11 @@ const fira_code = Fira_Code({
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const [slideoutEnabled, setSlideoutEnabled] = useState(false);
-    const footerRef = useRef(null);
+    let [footerEl, setFooterEl] = useState<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        setFooterEl(document.getElementById("footer") as HTMLDivElement);
+    }, []);
 
     const toggleSlideoutNav = (e: MouseEvent<HTMLDivElement> | null, newState?: boolean | undefined) => {
         setSlideoutEnabled((prev) => (newState === undefined ? !prev : newState));
@@ -22,21 +26,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang="en">
             <body className={`${fira_code.className}`}>
-                <Navbar
-                    toggleSlideoutNav={toggleSlideoutNav}
-                    slideoutEnabled={slideoutEnabled}
-                    contactEl={footerRef.current}
-                />
+                <Navbar toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
 
                 <SlideoutNav
                     toggleSlideoutNav={toggleSlideoutNav}
                     slideoutEnabled={slideoutEnabled}
-                    contactEl={footerRef.current}
+                    contactEl={footerEl}
                 />
 
                 <main className="mt-navbarHeight px-small sm:px-medium lg:px-large">{children}</main>
 
-                <div ref={footerRef}>
+                <div id="footer">
                     <Footer />
                 </div>
 

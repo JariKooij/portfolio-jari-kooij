@@ -1,8 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Project } from "@/types";
 import SkillBubble from "./SkillBubble";
-import Link from "next/link";
 
 type TProps = {
     project: Project;

@@ -24,7 +24,7 @@ const TextInput: React.FC<TProps> = ({ value, updateInput, placeholder, field, e
                 onChange={changeHandler}
             />
 
-            {errorMessage && <p className="mt-1 text-14px text-red-800">{errorMessage}</p>}
+            {errorMessage && <p className="mt-1 text-14px text-red-700">{errorMessage}</p>}
         </div>
     );
 };

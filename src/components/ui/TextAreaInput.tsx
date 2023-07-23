@@ -23,7 +23,7 @@ const TextAreaInput: React.FC<TProps> = ({ value, updateInput, placeholder, fiel
                 value={value}
                 onChange={changeHandler}
             />
-            {errorMessage && <p className="mt-1 text-14px text-red-800">{errorMessage}</p>}
+            {errorMessage && <p className="mt-1 text-14px text-red-700">{errorMessage}</p>}
         </div>
     );
 };

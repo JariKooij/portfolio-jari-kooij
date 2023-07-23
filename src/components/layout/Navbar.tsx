@@ -1,6 +1,6 @@
+import { useEffect, useState, MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, MouseEvent } from "react";
 
 type TProps = {
     toggleSlideoutNav: (e: MouseEvent<HTMLDivElement> | null, newState?: boolean | undefined) => void;
@@ -24,6 +24,7 @@ const Navbar: React.FC<TProps> = ({ toggleSlideoutNav, slideoutEnabled, contactE
     }, []);
 
     const scrollToContact = () => {
+        console.log(contactEl);
         if (!contactEl) return;
 
         const yOffset = -80;

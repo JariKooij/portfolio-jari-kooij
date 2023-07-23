@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import SocialIcons from "../common/SocialIcons";
 
 const Hero: React.FC = () => {
@@ -7,8 +8,8 @@ const Hero: React.FC = () => {
             <h1 className="max-w-min text-[22.5vw] font-medium leading-1 sm:text-9xl lg:max-w-max">Jari Kooij</h1>
 
             <span className="block h-full justify-self-end bg-white sm:w-[1px]" />
-            <p className="mb-16 mt-8 max-w-[25ch] text-20px font-light sm:text-24px">
-                Junior software engineer and student
+            <p className="l mb-16 mt-8 whitespace-pre-wrap text-20px font-light sm:text-24px">
+                {"Junior software engineer\nStudent"}
             </p>
 
             <a

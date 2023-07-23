@@ -1,6 +1,7 @@
 import Link from "next/link";
-import ProjectCard from "../common/ProjectCard";
+
 import projects from "@/data/projects.json";
+import ProjectCard from "../common/ProjectCard";
 import ArtProjectCard from "../common/ArtProjectCard";
 
 const ProjectsDisplay: React.FC = () => {
