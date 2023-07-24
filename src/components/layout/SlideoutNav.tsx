@@ -1,6 +1,7 @@
 import { MouseEvent } from "react";
 import Link from "next/link";
 
+import { scrollToEl } from "@/utils";
 import SocialIcons from "../common/SocialIcons";
 
 type TProps = {
@@ -11,12 +12,7 @@ type TProps = {
 
 const SlideoutNav: React.FC<TProps> = ({ toggleSlideoutNav, slideoutEnabled, contactEl }) => {
     const handleContactClick = () => {
-        if (!contactEl) return;
-
-        const yOffset = -80;
-        const top = contactEl!.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top, behavior: "smooth" });
-
+        scrollToEl(contactEl);
         toggleSlideoutNav(null, false);
     };
 

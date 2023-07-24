@@ -1,17 +1,16 @@
 "use client";
 import { useState, MouseEvent, useEffect } from "react";
-import { Fira_Code } from "next/font/google";
+import { NextFont } from "next/dist/compiled/@next/font";
 
 import Navbar from "@/components/layout/Navbar";
 import SlideoutNav from "@/components/layout/SlideoutNav";
 import Footer from "./Footer";
+type TProps = {
+    font: NextFont;
+    children: React.ReactNode;
+};
 
-const fira_code = Fira_Code({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-});
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout: React.FC<TProps> = ({ children, font }) => {
     const [slideoutEnabled, setSlideoutEnabled] = useState(false);
     let [footerEl, setFooterEl] = useState<HTMLDivElement | null>(null);
 
@@ -25,7 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <html lang="en">
-            <body className={`${fira_code.className}`}>
+            <body className={`${font.className}`}>
                 <Navbar toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
 
                 <SlideoutNav

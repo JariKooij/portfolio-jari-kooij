@@ -1,10 +1,11 @@
 import { ChangeEvent } from "react";
+import { ContactFormInput } from "@/types";
 
 type TProps = {
     value: string;
-    updateInput: (name: string, value: string) => void;
+    updateInput: (name: keyof ContactFormInput, value: string) => void;
     placeholder: string;
-    field: string;
+    field: keyof ContactFormInput;
     errorMessage: string;
 };
 
@@ -23,7 +24,7 @@ const TextAreaInput: React.FC<TProps> = ({ value, updateInput, placeholder, fiel
                 value={value}
                 onChange={changeHandler}
             />
-            {errorMessage && <p className="mt-1 text-14px text-red-700">{errorMessage}</p>}
+            {errorMessage && <p className="mt-1 text-12px text-red-600">{errorMessage}</p>}
         </div>
     );
 };

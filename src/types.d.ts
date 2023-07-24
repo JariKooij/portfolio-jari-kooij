@@ -8,3 +8,16 @@ export type Project = {
     iconHeight: number;
     iconWidth: number;
 };
+
+export type ValidationResult = {
+    field: string;
+    error: string;
+};
+
+export type ContactFormInput = {
+    name: string;
+    company: string;
+    email: string;
+    subject: string;
+    message: string;
+};

@@ -1,12 +1,14 @@
 import { FormEvent, useState } from "react";
 import Image from "next/image";
+import { send, validateContactInput } from "@/utils";
 
 import SocialIcons from "../common/SocialIcons";
 import TextInput from "../ui/TextInput";
 import TextAreaInput from "../ui/TextAreaInput";
+import { ContactFormInput, ValidationResult } from "@/types";
 
 const Footer: React.FC = () => {
-    const [userInput, setUserInput] = useState({
+    const [userInput, setUserInput] = useState<ContactFormInput>({
         name: "",
         company: "",
         email: "",
@@ -14,18 +16,88 @@ const Footer: React.FC = () => {
         message: "",
     });
 
-    const handleFormSubmit = (e: FormEvent) => {
+    const [validationMessages, setValidationMessages] = useState({
+        name: "",
+        company: "",
+        email: "",
+        subject: "",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [err, setErr] = useState("");
+
+    const handleFormSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        console.log("submitted");
+
+        if (loading) return;
+        if (!validateUserInput()) return;
+        setLoading(true);
+
+        const message = createMailMessage();
+
+        try {
+            await send("PF: " + userInput.subject, message);
+
+            setUserInput((prev) => {
+                return clearObject(prev) as typeof prev;
+            });
+
+            setValidationMessages((prev) => {
+                return clearObject(prev) as typeof prev;
+            });
+        } catch (e: any) {
+            setLoading(false);
+            setErr("Something went wrong, please try again later");
+            return;
+        } finally {
+            setLoading(false);
+        }
     };
 
-    const updateUserInput = (name: string, value: string) => {
+    const validateUserInput = () => {
+        const validationResults = validateContactInput(userInput);
+
+        if (!validationResults.length) return true;
+
+        updateValidationMessages(validationResults);
+
+        return false;
+    };
+
+    const updateValidationMessages = (valResults: ValidationResult[]) => {
+        const valMessages: any = {};
+
+        valResults.forEach((result) => {
+            valMessages[result.field] = result.error;
+        });
+
+        setValidationMessages({ ...valMessages });
+    };
+
+    const createMailMessage = () => {
+        return `from: ${userInput.name}, ${userInput.email}\ncompany: ${userInput.company}\n\n${userInput.message}`;
+    };
+
+    const updateUserInput = (name: keyof ContactFormInput, value: string) => {
+        if ((name === "company" || name === "name") && value.length > 70) value = value.substring(0, 70);
+        if (name === "subject" && value.length > 120) value = value.substring(0, 120);
+
         setUserInput((prev) => {
             const obj = { ...prev };
-            obj[name as keyof typeof userInput] = value;
+            obj[name] = value;
 
             return obj;
         });
+    };
+
+    const clearObject = (obj: { [key: string]: any }) => {
+        const fields = { ...obj };
+        for (let field in fields) {
+            fields[field] = "";
+        }
+
+        return fields;
     };
 
     return (
@@ -75,7 +147,7 @@ const Footer: React.FC = () => {
                             value={userInput.name}
                             placeholder="Name"
                             updateInput={updateUserInput}
-                            errorMessage=""
+                            errorMessage={validationMessages.name}
                         />
 
                         <TextInput
@@ -83,7 +155,7 @@ const Footer: React.FC = () => {
                             value={userInput.email}
                             placeholder="Email"
                             updateInput={updateUserInput}
-                            errorMessage=""
+                            errorMessage={validationMessages.email}
                         />
 
                         <TextInput
@@ -91,7 +163,7 @@ const Footer: React.FC = () => {
                             value={userInput.company}
                             placeholder="Company"
                             updateInput={updateUserInput}
-                            errorMessage=""
+                            errorMessage={validationMessages.company}
                         />
 
                         <TextInput
@@ -99,7 +171,7 @@ const Footer: React.FC = () => {
                             value={userInput.subject}
                             placeholder="Subject"
                             updateInput={updateUserInput}
-                            errorMessage=""
+                            errorMessage={validationMessages.subject}
                         />
 
                         <TextAreaInput
@@ -107,18 +179,22 @@ const Footer: React.FC = () => {
                             value={userInput.message}
                             placeholder="Message"
                             updateInput={updateUserInput}
-                            errorMessage=""
+                            errorMessage={validationMessages.message}
                         />
                     </div>
+
+                    {err && <p className="text-center text-14px text-red-600 sm:text-right">{err}</p>}
                 </div>
                 <div className="col-span-2 flex w-full flex-col-reverse items-center justify-between gap-y-medium sm:flex-row sm:items-end">
-                    <div className="text-12px">© Jari Kooij | 2023</div>
+                    <div className="text-12px">© Jari Kooij - 2023</div>
 
                     <button
                         type="submit"
-                        className="flex w-full justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max"
+                        className={`flex w-full justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
+                            loading ? "opacity-50" : ""
+                        }`}
                     >
-                        <span className="uppercase mix-blend-exclusion">Sent message</span>
+                        <span className="uppercase mix-blend-exclusion">{loading ? "Sending..." : "Sent message"}</span>
                         <Image
                             src={"/icons/arrow-right.svg"}
                             height={13}
