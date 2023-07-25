@@ -1,11 +1,12 @@
 import { FormEvent, useState } from "react";
 import Image from "next/image";
+
+import { ContactFormInput, ValidationResult } from "@/types";
 import { send, validateContactInput } from "@/utils";
 
 import SocialIcons from "../common/SocialIcons";
 import TextInput from "../ui/TextInput";
 import TextAreaInput from "../ui/TextAreaInput";
-import { ContactFormInput, ValidationResult } from "@/types";
 
 const Footer: React.FC = () => {
     const [userInput, setUserInput] = useState<ContactFormInput>({
@@ -136,7 +137,7 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div>
-                    <h2 className="mb-2 text-20px font-medium tracking-[.5em] sm:text-24px lg:text-32px">
+                    <h2 className="mb-2 text-[7vw] font-medium tracking-[.5em] sm:text-24px lg:text-32px">
                         Let’s talk!
                     </h2>
                     <p className="mb-4 text-12px font-medium text-blue">I’m always up for a chat</p>

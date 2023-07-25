@@ -8,7 +8,7 @@ const ProjectsDisplay: React.FC = () => {
     return (
         <>
             <div className="mb-mobile_gap flex flex-col gap-medium overflow-x-hidden sm:mb-tablet_gap lg:mb-desktop_gap lg:gap-huuge">
-                <h2 className="mr-[-.75em] text-center text-[6vw] font-medium tracking-huuge sm:text-24px lg:text-32px">
+                <h2 className="mr-[-.75em] text-center text-[7vw] font-medium tracking-huuge sm:text-24px lg:text-32px">
                     Featured projects
                 </h2>
 

@@ -10,10 +10,10 @@ type TProps = {
 
 const ProjectCard: React.FC<TProps> = ({ project }) => {
     return (
-        <div className="mx-auto w-full max-w-5xl rounded bg-transparent-grey p-small_medium lg:p-medium">
+        <div className="group mx-auto w-full max-w-5xl rounded bg-transparent-grey p-small_medium lg:p-medium">
             <div className="flex items-start justify-between gap-6">
                 <div className="mb-8">
-                    <h3 className="mb-6 text-16px font-medium sm:mb-3 sm:text-20px">{project.title}</h3>
+                    <h3 className="mb-6 text-20px font-medium">{project.title}</h3>
                     <ul>
                         {project.contributions.map((item) => (
                             <li

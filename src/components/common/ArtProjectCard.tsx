@@ -8,7 +8,7 @@ const ArtProjectCard: React.FC = () => {
         <div className="group mx-auto w-full max-w-5xl rounded bg-transparent-grey p-small_medium lg:p-medium">
             <div className="flex items-start justify-between gap-6">
                 <div className="mb-2">
-                    <h3 className="mb-3 text-16px font-medium sm:text-20px">Digital art and Photoshop compositing</h3>
+                    <h3 className="mb-3 text-20px font-medium">Digital art and Photoshop compositing</h3>
                 </div>
             </div>
 
