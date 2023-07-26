@@ -4,7 +4,7 @@ import SocialIcons from "../common/SocialIcons";
 
 const Hero: React.FC = () => {
     return (
-        <div className="full-height mb-tablet_gap grid grid-cols-[auto_minmax(10px,_1fr)] grid-rows-[auto_auto_1fr] pb-6 pt-12 sm:mb-tablet_gap lg:mb-desktop_gap lg:pb-12 lg:pt-24">
+        <div className="full-height mb-tablet_gap grid grid-cols-[auto_minmax(100px,_1fr)] grid-rows-[auto_auto_1fr] pb-6 pt-12 sm:mb-tablet_gap lg:mb-desktop_gap lg:pb-12 lg:pt-24">
             <h1 className="relative max-w-min overflow-hidden rounded-md text-[22.5vw] font-medium leading-1 after:absolute after:inset-0 after:-z-10 after:hidden after:h-full after:w-full after:translate-x-[-100%] after:rounded-md after:bg-transparent-black after:transition-transform after:duration-1000 hover:after:translate-x-0 sm:text-9xl lg:max-w-max lg:after:block">
                 Jari Kooij
             </h1>
