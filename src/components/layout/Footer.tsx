@@ -191,7 +191,7 @@ const Footer: React.FC = () => {
 
                     <button
                         type="submit"
-                        className={`flex w-full justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
+                        className={`flex w-full items-center justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
                             loading ? "opacity-50" : ""
                         }`}
                     >
