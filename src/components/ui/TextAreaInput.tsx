@@ -17,7 +17,7 @@ const TextAreaInput: React.FC<TProps> = ({ value, updateInput, placeholder, fiel
     return (
         <div className="col-span-2">
             <textarea
-                className=" h-64 w-full border-b-[1px] border-white border-opacity-50 bg-transparent py-4 placeholder:uppercase focus:border-opacity-100 focus:outline-none"
+                className=" h-64 w-full rounded-none border-b-[1px] border-white border-opacity-50 bg-transparent py-4 placeholder:uppercase focus:border-opacity-100 focus:outline-none"
                 name={field}
                 id={field}
                 placeholder={placeholder}
