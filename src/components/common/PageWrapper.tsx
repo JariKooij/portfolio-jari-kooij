@@ -10,7 +10,7 @@ const PageWrapper: React.FC<TProps> = ({ children }) => {
         <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mx-auto h-full w-full max-w-full"
+            className="mx-auto h-full w-full max-w-full overflow-hidden"
         >
             {children}
         </m.div>
