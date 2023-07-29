@@ -1,0 +1,7 @@
+import ProjectsPage from "@/components/projects/ProjectsPage";
+
+const Projects: React.FC = () => {
+    return <ProjectsPage />;
+};
+
+export default Projects;

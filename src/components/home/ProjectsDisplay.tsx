@@ -7,14 +7,14 @@ import ArtProjectCard from "../common/ArtProjectCard";
 const ProjectsDisplay: React.FC = () => {
     return (
         <>
-            <div className="mb-mobile_gap flex flex-col gap-medium overflow-x-hidden sm:mb-tablet_gap lg:mb-desktop_gap lg:gap-huuge">
+            <div className="mx-auto mb-mobile_gap flex max-w-5xl flex-col gap-medium overflow-x-hidden sm:mb-tablet_gap lg:mb-desktop_gap lg:gap-huuge">
                 <h2 className="mr-[-.75em] text-center text-[7vw] font-medium tracking-huuge sm:text-24px lg:text-32px">
                     Featured projects
                 </h2>
 
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
-                ))}
+                {projects.map((project) =>
+                    project.featured ? <ProjectCard key={project.id} project={project} /> : null
+                )}
 
                 <ArtProjectCard />
 

@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "featured": true,
         "title": "Capgemini NL internships website",
         "companyName": "Capgemini",
         "contributions": ["Front-end development", "UX/UI design"],
@@ -11,7 +12,30 @@
     },
     {
         "id": 2,
+        "featured": true,
         "title": "DDAMA Augmented Reality Art-Tour APP",
+        "companyName": "Dutch Digital Art Museum Almere",
+        "contributions": ["App development", "Front-end development", "UX/UI design"],
+        "skills": ["Unity", "C#", "React", "SCSS", "Figma"],
+        "iconUrl": "/icons/projects/ddama.svg",
+        "iconHeight": 48,
+        "iconWidth": 47
+    },
+    {
+        "id": 3,
+        "featured": false,
+        "title": "Salesprof",
+        "companyName": "Capgemini",
+        "contributions": ["Front-end development", "UX/UI design"],
+        "skills": ["Next.js", "TypeScript", "SCSS", "Figma"],
+        "iconUrl": "/icons/projects/capgemini.svg",
+        "iconHeight": 48,
+        "iconWidth": 52
+    },
+    {
+        "id": 4,
+        "featured": false,
+        "title": "Personal portfolio",
         "companyName": "Dutch Digital Art Museum Almere",
         "contributions": ["App development", "Front-end development", "UX/UI design"],
         "skills": ["Unity", "C#", "React", "SCSS", "Figma"],

@@ -34,7 +34,11 @@ const Navbar: React.FC<TProps> = ({ toggleSlideoutNav, slideoutEnabled, contactE
             }`}
         >
             <div className="mx-auto flex h-navbarHeight max-w-full items-center justify-between">
-                <Link href="/" className="transition-all hover:scale-125">
+                <Link
+                    href="/"
+                    className="transition-all hover:scale-125"
+                    onClick={() => toggleSlideoutNav(null, false)}
+                >
                     <Image src="/icons/smile.svg" height={24} width={24} alt="jarikooij.com" />
                 </Link>
 

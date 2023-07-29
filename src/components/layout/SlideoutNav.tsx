@@ -24,7 +24,9 @@ const SlideoutNav: React.FC<TProps> = ({ toggleSlideoutNav, slideoutEnabled, con
         >
             <ul className="mt-large flex flex-col gap-small text-right text-[15vw]">
                 <li className="cursor-pointer rounded-md bg-transparent transition-all hover:bg-white hover:text-black">
-                    <Link href="/projects">Projects</Link>
+                    <Link href="/projects" onClick={() => toggleSlideoutNav(null, false)}>
+                        Projects
+                    </Link>
                 </li>
                 <li className="cursor-pointer rounded-md bg-transparent transition-all hover:bg-white hover:text-black">
                     <button className="uppercase" onClick={handleContactClick}>

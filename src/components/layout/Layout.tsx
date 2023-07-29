@@ -33,7 +33,7 @@ const Layout: React.FC<TProps> = ({ children, font }) => {
                     contactEl={footerEl}
                 />
 
-                <main className="mt-navbarHeight px-small sm:px-medium lg:px-large">{children}</main>
+                <main className="min-h-full px-small pt-navbarHeight sm:px-medium lg:px-large">{children}</main>
 
                 <div id="footer">
                     <Footer />
