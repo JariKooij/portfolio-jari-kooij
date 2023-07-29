@@ -5,7 +5,7 @@ import SubTitle from "../ui/SubTitle";
 
 const Hero: React.FC = () => {
     return (
-        <div className="full-height grid-cols-[auto_1fr)] mb-tablet_gap grid grid-rows-[auto_auto_1fr] pb-6 pt-12 sm:mb-tablet_gap lg:mb-desktop_gap lg:pb-12 lg:pt-24">
+        <div className="full-height grid-cols-[auto_1fr)] mb-mobile_gap grid grid-rows-[auto_auto_1fr] pb-6 pt-12 sm:mb-desktop_gap lg:pb-12 lg:pt-24">
             <h1 className="max-w-min text-[22.5vw] font-medium leading-1 sm:text-9xl lg:max-w-max">Jari Kooij</h1>
 
             <span className="block h-full justify-self-end bg-white lg:w-[1px]" />

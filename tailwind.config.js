@@ -37,8 +37,7 @@ module.exports = {
             },
             margin: {
                 mobile_gap: "256px",
-                tablet_gap: "300px",
-                desktop_gap: "400px",
+                desktop_gap: "300px",
             },
             lineHeight: {
                 1: "1em",
