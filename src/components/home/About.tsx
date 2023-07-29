@@ -6,7 +6,7 @@ import skillIcons from "@/data/skill-icons.json";
 const About: React.FC = () => {
     return (
         <div className="mx-auto mb-mobile_gap flex  max-w-[635px] flex-col gap-4 sm:mb-desktop_gap">
-            <p className="mb-16 whitespace-pre-wrap text-center text-[14px] [word-spacing:-.36em] sm:text-justify sm:text-base">
+            <p className="mb-16 whitespace-pre-wrap text-left text-[14px] [word-spacing:-.36em] sm:text-justify sm:text-base">
                 {aboutText}
             </p>
             <div className="flex flex-wrap justify-center gap-2 gap-y-6 sm:gap-8">
