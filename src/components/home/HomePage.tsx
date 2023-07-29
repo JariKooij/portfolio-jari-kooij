@@ -4,7 +4,7 @@ import ProjectsDisplay from "./ProjectsDisplay";
 
 const HomePage: React.FC = () => {
     return (
-        <div className="mx-auto h-full w-full max-w-full">
+        <div>
             <Hero />
             <About />
             <ProjectsDisplay />

@@ -1,6 +1,10 @@
+import PageWrapper from "@/components/common/PageWrapper";
 import HomePage from "@/components/home/HomePage";
-import Image from "next/image";
 
 export default function Home() {
-    return <HomePage />;
+    return (
+        <PageWrapper>
+            <HomePage />
+        </PageWrapper>
+    );
 }

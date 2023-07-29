@@ -13,7 +13,11 @@ const fira_code = Fira_Code({
 // todo metadata
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-    return <Layout font={fira_code}>{children}</Layout>;
+    return (
+        <html lang="en">
+            <Layout font={fira_code}>{children}</Layout>
+        </html>
+    );
 };
 
 export default RootLayout;

@@ -4,7 +4,7 @@ import ProjectsHero from "./ProjectsHero";
 
 const ProjectsPage: React.FC = () => {
     return (
-        <div className="mx-auto h-full w-full max-w-full">
+        <div>
             <ProjectsHero />
             <ProjectsGridSection />
             <ArtProjectSection />
