@@ -12,6 +12,7 @@ module.exports = {
             },
             maxWidth: {
                 full: "1320px",
+                small: "1024px",
             },
             colors: {
                 dark: "#151515",
@@ -52,6 +53,9 @@ module.exports = {
                 "20px": "1.25rem",
                 "24px": "1.5rem",
                 "32px": "2rem",
+                "40px": "2.5rem",
+                "48px": "3rem",
+                "64px": "4rem",
             },
             letterSpacing: {
                 huuge: ".75em",

@@ -7,7 +7,7 @@ import ArtProjectCard from "../common/ArtProjectCard";
 const ProjectsDisplay: React.FC = () => {
     return (
         <>
-            <div className="mx-auto mb-mobile_gap flex max-w-5xl flex-col gap-medium overflow-x-hidden sm:mb-desktop_gap lg:gap-huuge">
+            <div className="mx-auto mb-mobile_gap flex max-w-small flex-col gap-medium overflow-x-hidden sm:mb-desktop_gap lg:gap-huuge">
                 <h2 className="mr-[-.75em] text-center text-[7vw] font-medium tracking-huuge sm:text-24px lg:text-32px">
                     Featured projects
                 </h2>

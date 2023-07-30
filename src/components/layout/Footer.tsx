@@ -7,6 +7,7 @@ import { send, validateContactInput } from "@/utils";
 import SocialIcons from "../common/SocialIcons";
 import TextInput from "../ui/TextInput";
 import TextAreaInput from "../ui/TextAreaInput";
+import Label from "../ui/Label";
 
 const Footer: React.FC = () => {
     const [userInput, setUserInput] = useState<ContactFormInput>({
@@ -116,15 +117,19 @@ const Footer: React.FC = () => {
                             </div>
 
                             <div className="max-w-full">
-                                <label className="block text-12px font-medium text-blue">Email</label>
-                                <a href="mailto:jarikooij.dev@gmail.com" target="_blank" className="hover:underline">
+                                <Label>Email</Label>
+                                <a
+                                    href="mailto:jarikooij.dev@gmail.com"
+                                    target="_blank"
+                                    className="break-all hover:underline"
+                                >
                                     jarikooij.dev@gmail.com
                                 </a>
                             </div>
                         </div>
 
                         <div className="row-start-2 sm:row-start-auto sm:ml-[-56px] sm:justify-self-center lg:ml-0 lg:justify-self-start">
-                            <label className="block text-12px font-medium text-blue">Location</label>
+                            <Label>Location</Label>
                             <a href="https://goo.gl/maps/bUpqqvxhBzNFQUrn6" target="_blank" className="hover:underline">
                                 Netherlands
                             </a>

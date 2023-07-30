@@ -7,6 +7,9 @@ export type Project = {
     iconUrl: string;
     iconHeight: number;
     iconWidth: number;
+    demoUrl?: string;
+    videoUrl?: string;
+    images?: string[];
 };
 
 export type ValidationResult = {

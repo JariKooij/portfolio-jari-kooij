@@ -2,24 +2,29 @@
     {
         "id": 1,
         "featured": true,
-        "title": "Capgemini NL internships website",
+        "title": "Capgemini internships",
         "companyName": "Capgemini",
         "contributions": ["Front-end development", "UX/UI design"],
-        "skills": ["Next.js", "TypeScript", "SCSS", "Figma"],
+        "skills": ["Next.js", "TypeScript", "SCSS", "Figma", "Scrum"],
         "iconUrl": "/icons/projects/capgemini.svg",
         "iconHeight": 48,
-        "iconWidth": 52
+        "iconWidth": 52,
+        "demoUrl": "https://www.google.com",
+        "discussionPath": "/markdown/discussion-1.md",
+        "images": ["/images/projects/capgemini/1.jpg", "/images/projects/capgemini/2.jpg"]
     },
     {
         "id": 2,
         "featured": true,
-        "title": "DDAMA Augmented Reality Art-Tour APP",
+        "title": "DDAMA AR Art-Tour APP",
         "companyName": "Dutch Digital Art Museum Almere",
         "contributions": ["App development", "Front-end development", "UX/UI design"],
         "skills": ["Unity", "C#", "React", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/ddama.svg",
         "iconHeight": 48,
-        "iconWidth": 47
+        "iconWidth": 47,
+        "discussionPath": "/markdown/discussion-1.md",
+        "videoUrl": "https://www.youtube.com/watch?v=p01JA8ch2Ns"
     },
     {
         "id": 3,
@@ -30,7 +35,8 @@
         "skills": ["Next.js", "TypeScript", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/capgemini.svg",
         "iconHeight": 48,
-        "iconWidth": 52
+        "iconWidth": 52,
+        "discussionPath": "/markdown/discussion-1.md"
     },
     {
         "id": 4,
@@ -41,6 +47,7 @@
         "skills": ["Unity", "C#", "React", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/ddama.svg",
         "iconHeight": 48,
-        "iconWidth": 47
+        "iconWidth": 47,
+        "discussionPath": "/markdown/discussion-1.md"
     }
 ]

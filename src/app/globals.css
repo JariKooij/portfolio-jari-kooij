@@ -42,7 +42,6 @@ body {
 }
 
 html {
-    font-family: var(--font-inter);
     text-transform: uppercase;
 }
 
@@ -62,4 +61,100 @@ body {
     position: relative !important;
     height: unset !important;
     overflow: hidden;
+    background-color: black;
+}
+
+.md h1,
+.md h2,
+.md h4,
+.md h5,
+.md h6 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.md h1 {
+    font-size: 2rem;
+}
+
+.md h2 {
+    font-size: 1.5rem;
+}
+
+.md h3 {
+    font-size: 1rem;
+}
+
+.md code {
+    display: inline;
+    max-width: max-content;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 0.5em;
+}
+
+.md pre code {
+    display: block;
+    background-color: rgba(21, 21, 21, 0.33);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.md blockquote {
+    position: relative;
+    line-height: 1em;
+}
+
+.md blockquote p {
+    padding-left: 1.5rem;
+    color: #daf6ff;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.md blockquote::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: #daf6ff;
+    border-radius: 1rem;
+}
+
+.md ul {
+    font-size: 0rem;
+}
+
+.md ul li {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1em;
+    position: relative;
+}
+
+.md ul li::before {
+    content: "";
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute;
+    border-radius: 50%;
+    left: -1.5rem;
+    top: 1.25em;
+    background-color: #daf6ff;
+}
+
+.md ol {
+    counter-reset: my-awesome-counter;
+}
+
+.md ol li {
+    counter-increment: my-awesome-counter;
+}
+
+.md ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: #daf6ff;
+    font-weight: 500;
 }
