@@ -7,8 +7,8 @@
         "contributions": ["Front-end development", "UX/UI design"],
         "skills": ["Next.js", "TypeScript", "SCSS", "Figma", "Scrum"],
         "iconUrl": "/icons/projects/capgemini.svg",
-        "iconHeight": 48,
-        "iconWidth": 52,
+        "iconHeight": 37,
+        "iconWidth": 40,
         "demoUrl": "https://www.google.com",
         "discussionPath": "/markdown/discussion-1.md",
         "images": ["/images/projects/capgemini/1.jpg", "/images/projects/capgemini/2.jpg"],
@@ -22,8 +22,8 @@
         "contributions": ["App development", "Front-end development", "UX/UI design"],
         "skills": ["Unity", "C#", "React", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/ddama.svg",
-        "iconHeight": 48,
-        "iconWidth": 47,
+        "iconHeight": 40,
+        "iconWidth": 40,
         "discussionPath": "/markdown/discussion-1.md",
         "videoUrl": "https://www.youtube.com/watch?v=p01JA8ch2Ns",
         "hidden": false
@@ -36,8 +36,8 @@
         "contributions": ["Front-end development", "UX/UI design"],
         "skills": ["Next.js", "TypeScript", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/capgemini.svg",
-        "iconHeight": 48,
-        "iconWidth": 52,
+        "iconHeight": 37,
+        "iconWidth": 40,
         "discussionPath": "/markdown/discussion-1.md",
         "hidden": true
     },
@@ -49,8 +49,8 @@
         "contributions": ["App development", "Front-end development", "UX/UI design"],
         "skills": ["Unity", "C#", "React", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/ddama.svg",
-        "iconHeight": 48,
-        "iconWidth": 47,
+        "iconHeight": 40,
+        "iconWidth": 40,
         "discussionPath": "/markdown/discussion-1.md",
         "hidden": false
     }

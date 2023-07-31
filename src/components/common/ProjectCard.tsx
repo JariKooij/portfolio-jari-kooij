@@ -11,28 +11,28 @@ type TProps = {
 const ProjectCard: React.FC<TProps> = ({ project }) => {
     return (
         <article className="flex flex-col">
-            <div className="group flex grow flex-col justify-between rounded-t bg-transparent-grey p-small_medium lg:p-medium">
-                <div className="flex items-start justify-between gap-6">
-                    <div className="mb-8">
-                        <h3 className="mb-6 text-20px font-medium">{project.title}</h3>
-                        <ul>
-                            {project.contributions.map((item) => (
-                                <li
-                                    key={item}
-                                    className="relative mb-2 max-w-max rounded-lg bg-[#daf6ffa1] px-4 py-2 text-14px text-black last-of-type:mb-0 sm:text-16px"
-                                >
-                                    {"//"} {item}
-                                </li>
-                            ))}
-                        </ul>
+            <div className="group flex grow flex-col justify-between gap-6 rounded-t bg-transparent-grey p-small sm:p-small_medium lg:p-medium">
+                <div>
+                    <div className="mb-6 mt-1 flex w-full items-start justify-between gap-2">
+                        <h3 className="text-20px font-medium sm:text-24px">{project.title}</h3>
+                        <Image
+                            src={project.iconUrl}
+                            height={project.iconHeight}
+                            width={project.iconWidth}
+                            alt={project.companyName}
+                        />
                     </div>
 
-                    <Image
-                        src={project.iconUrl}
-                        height={project.iconHeight}
-                        width={project.iconWidth}
-                        alt={project.companyName}
-                    />
+                    <ul>
+                        {project.contributions.map((item) => (
+                            <li
+                                key={item}
+                                className="relative mb-2 rounded-lg bg-[#daf6ffa1] px-4 py-2 text-14px text-black last-of-type:mb-0 sm:max-w-max sm:text-16px"
+                            >
+                                {"// " + item}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
