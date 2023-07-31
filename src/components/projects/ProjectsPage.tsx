@@ -5,9 +5,11 @@ import ProjectsHero from "./ProjectsHero";
 const ProjectsPage: React.FC = () => {
     return (
         <div className="px-small sm:px-medium lg:px-large">
-            <ProjectsHero />
-            <ProjectsGridSection />
-            <ArtProjectSection />
+            <div className="mx-auto max-w-full">
+                <ProjectsHero />
+                <ProjectsGridSection />
+                <ArtProjectSection />
+            </div>
         </div>
     );
 };

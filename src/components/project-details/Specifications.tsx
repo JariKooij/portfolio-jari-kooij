@@ -9,8 +9,8 @@ type TProps = {
 
 const Specifications: React.FC<TProps> = ({ project }) => {
     return (
-        <div className="lg:pr-large">
-            <div className="flex h-max flex-col gap-12 bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 lg:rounded lg:p-8">
+        <div className="ml-small overflow-hidden rounded-l sm:ml-medium lg:ml-0">
+            <div className="flex h-max flex-col gap-12 bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 lg:rounded-t lg:p-8">
                 <div className="flex items-center justify-between gap-8">
                     <div>
                         <Label>Company</Label>
@@ -59,7 +59,7 @@ const Specifications: React.FC<TProps> = ({ project }) => {
             {project.demoUrl && (
                 <Link
                     href={project.demoUrl}
-                    className="flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70 lg:mx-0 lg:mt-small lg:rounded lg:px-8"
+                    className="flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70 md:px-medium lg:mx-0 lg:rounded-b lg:px-8"
                 >
                     <span className="text-14px leading-1 sm:text-16px">Visit demo</span>
                     <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />

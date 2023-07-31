@@ -5,9 +5,11 @@ import ProjectsDisplay from "./ProjectsDisplay";
 const HomePage: React.FC = () => {
     return (
         <div className="px-small sm:px-medium lg:px-large">
-            <Hero />
-            <About />
-            <ProjectsDisplay />
+            <div className="mx-auto max-w-full">
+                <Hero />
+                <About />
+                <ProjectsDisplay />
+            </div>
         </div>
     );
 };

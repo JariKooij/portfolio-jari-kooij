@@ -37,7 +37,7 @@ const Layout: React.FC<TProps> = ({ children, font }) => {
             </div>
 
             <m.div
-                className="fixed bottom-0 left-0 z-30 h-[4px] w-full origin-left bg-blue opacity-60 "
+                className="fixed bottom-0 left-0 z-30 h-[3px] w-full origin-left bg-blue"
                 style={{ scaleX: scrollYProgress }}
             />
 
