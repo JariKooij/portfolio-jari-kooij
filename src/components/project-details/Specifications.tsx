@@ -9,9 +9,9 @@ type TProps = {
 
 const Specifications: React.FC<TProps> = ({ project }) => {
     return (
-        <div className="ml-small overflow-hidden sm:ml-medium lg:ml-0">
+        <div className="ml-small overflow-hidden rounded-l sm:ml-medium lg:ml-0">
             <div
-                className={`flex h-max flex-col gap-12 rounded-l bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 ${
+                className={`flex h-max flex-col gap-12 bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 ${
                     project.demoUrl ? "lg:rounded-t" : "lg:rounded"
                 } lg:p-8`}
             >
