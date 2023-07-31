@@ -9,7 +9,7 @@ const ArtProjectCard: React.FC = () => {
             <div className="group grow rounded-t bg-transparent-grey p-small_medium lg:p-medium">
                 <div className="mb-6 flex justify-between gap-6">
                     <h3 className="text-20px font-medium">Digital art</h3>
-                    <Image src={"/icons/smile.svg"} height={40} width={40} alt="personal project" />
+                    <Image src={"/icons/smile.svg"} height={32} width={32} alt="personal project" />
                 </div>
 
                 <div className="mb-6 grid grid-cols-3 gap-6">
