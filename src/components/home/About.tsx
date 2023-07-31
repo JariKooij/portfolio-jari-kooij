@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import aboutText from "@/data/about-txt.json";
 import skillIcons from "@/data/skill-icons.json";
+import Reveal from "../common/Reveal";
 
 const About: React.FC = () => {
     return (

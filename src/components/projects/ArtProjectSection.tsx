@@ -1,12 +1,18 @@
 import ArtProjectCard from "../common/ArtProjectCard";
+import Reveal from "../common/Reveal";
 
 const ArtProjectSection: React.FC = () => {
     return (
         <section className="mb-24 sm:mb-mobile_gap">
-            <p className="mb-8 max-w-[300px] whitespace-pre-wrap text-left text-20px sm:mx-auto sm:max-w-max sm:text-center sm:text-24px">
-                Oh, and I make some digital art as well :)
-            </p>
-            <ArtProjectCard />
+            <Reveal transition="moveUp">
+                <p className="mb-8  max-w-[250px] whitespace-pre-wrap text-left text-16px sm:mx-auto sm:max-w-max sm:text-center sm:text-24px">
+                    And I sometimes make digital art as well :)
+                </p>
+            </Reveal>
+
+            <Reveal transition="moveUp" delay={0.5}>
+                <ArtProjectCard />
+            </Reveal>
         </section>
     );
 };

@@ -10,7 +10,7 @@ type TProps = {
 
 const ProjectCard: React.FC<TProps> = ({ project }) => {
     return (
-        <article className="flex flex-col">
+        <article className="flex grow flex-col">
             <div className="group flex grow flex-col justify-between gap-6 rounded-t bg-transparent-grey p-small sm:p-small_medium lg:p-medium">
                 <div>
                     <div className="mb-6 mt-1 flex w-full items-start justify-between gap-2">

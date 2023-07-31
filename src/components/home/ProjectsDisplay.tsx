@@ -3,6 +3,7 @@ import Link from "next/link";
 import projects from "@/data/projects.json";
 import ProjectCard from "../common/ProjectCard";
 import ArtProjectCard from "../common/ArtProjectCard";
+import Reveal from "../common/Reveal";
 
 const ProjectsDisplay: React.FC = () => {
     return (
@@ -13,10 +14,16 @@ const ProjectsDisplay: React.FC = () => {
                 </h2>
 
                 {projects.map((project) =>
-                    project.featured && !project.hidden ? <ProjectCard key={project.id} project={project} /> : null
+                    project.featured && !project.hidden ? (
+                        <Reveal key={project.id} transition="moveUp">
+                            <ProjectCard key={project.id} project={project} />
+                        </Reveal>
+                    ) : null
                 )}
 
-                <ArtProjectCard />
+                <Reveal transition="moveUp">
+                    <ArtProjectCard />
+                </Reveal>
 
                 <Link href="/projects" className="mx-auto text-14px font-medium hover:underline sm:text-16px">
                     Show me more!

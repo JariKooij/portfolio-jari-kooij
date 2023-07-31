@@ -5,14 +5,11 @@ import SkillBubble from "./SkillBubble";
 
 const ArtProjectCard: React.FC = () => {
     return (
-        <article>
-            <div className="group rounded-t bg-transparent-grey p-small_medium lg:p-medium">
+        <article className="grow">
+            <div className="group grow rounded-t bg-transparent-grey p-small_medium lg:p-medium">
                 <div className="mb-6 flex items-center justify-between gap-6">
-                    {/* <div className="mb-2 flex justify-between"> */}
                     <h3 className="text-20px font-medium">Digital art</h3>
-
                     <Image src={"/icons/smile.svg"} height={40} width={40} alt="personal project" />
-                    {/* </div> */}
                 </div>
 
                 <div className="mb-6 grid grid-cols-3 gap-6">
