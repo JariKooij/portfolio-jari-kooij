@@ -16,7 +16,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
     };
 
     return (
-        <article className="mx-auto mb-12 flex max-w-full flex-col gap-8 pt-12 sm:mb-24 lg:gap-16">
+        <article className="mx-auto mb-12 flex max-w-full flex-col gap-8 pt-4 sm:mb-24 lg:gap-16 lg:pt-12">
             <h1 className="px-small text-40px font-medium leading-1 [word-spacing:-0.25em] sm:px-medium sm:text-48px lg:px-large lg:text-64px">
                 {project.title}
             </h1>

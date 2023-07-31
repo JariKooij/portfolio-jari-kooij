@@ -59,7 +59,7 @@ const Specifications: React.FC<TProps> = ({ project }) => {
             {project.demoUrl && (
                 <Link
                     href={project.demoUrl}
-                    className="flex justify-between bg-transparent-white p-4 transition-opacity hover:opacity-70 sm:mx-medium sm:rounded lg:mx-0 lg:mt-small lg:px-8"
+                    className="flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70 lg:mx-0 lg:mt-small lg:rounded lg:px-8"
                 >
                     <span className="text-14px leading-1 sm:text-16px">Visit demo</span>
                     <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />
