@@ -7,13 +7,13 @@ const ArtProjectCard: React.FC = () => {
     return (
         <article className="grow">
             <div className="group grow rounded-t bg-transparent-grey p-small_medium lg:p-medium">
-                <div className="mb-6 flex items-center justify-between gap-6">
+                <div className="mb-6 flex justify-between gap-6">
                     <h3 className="text-20px font-medium">Digital art</h3>
                     <Image src={"/icons/smile.svg"} height={40} width={40} alt="personal project" />
                 </div>
 
                 <div className="mb-6 grid grid-cols-3 gap-6">
-                    <div className="relative col-span-3 h-72 overflow-hidden rounded md:col-span-2">
+                    <div className="relative col-span-3 h-40 overflow-hidden rounded md:col-span-2 md:h-64">
                         <Image
                             src={"/images/projects/art/1.jpg"}
                             fill
