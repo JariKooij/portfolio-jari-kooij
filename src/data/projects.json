@@ -2,8 +2,8 @@
     {
         "id": 1,
         "featured": true,
-        "title": "Capgemini internships",
-        "companyName": "Capgemini",
+        "title": "Capgemini internships platform",
+        "companyName": "Capgemini NL",
         "contributions": ["Front-end development", "UX/UI design"],
         "skills": ["Next.js", "TypeScript", "SCSS", "Figma", "Scrum"],
         "iconUrl": "/icons/projects/capgemini.svg",
@@ -11,7 +11,8 @@
         "iconWidth": 52,
         "demoUrl": "https://www.google.com",
         "discussionPath": "/markdown/discussion-1.md",
-        "images": ["/images/projects/capgemini/1.jpg", "/images/projects/capgemini/2.jpg"]
+        "images": ["/images/projects/capgemini/1.jpg", "/images/projects/capgemini/2.jpg"],
+        "hidden": false
     },
     {
         "id": 2,
@@ -24,7 +25,8 @@
         "iconHeight": 48,
         "iconWidth": 47,
         "discussionPath": "/markdown/discussion-1.md",
-        "videoUrl": "https://www.youtube.com/watch?v=p01JA8ch2Ns"
+        "videoUrl": "https://www.youtube.com/watch?v=p01JA8ch2Ns",
+        "hidden": false
     },
     {
         "id": 3,
@@ -36,7 +38,8 @@
         "iconUrl": "/icons/projects/capgemini.svg",
         "iconHeight": 48,
         "iconWidth": 52,
-        "discussionPath": "/markdown/discussion-1.md"
+        "discussionPath": "/markdown/discussion-1.md",
+        "hidden": true
     },
     {
         "id": 4,
@@ -48,6 +51,7 @@
         "iconUrl": "/icons/projects/ddama.svg",
         "iconHeight": 48,
         "iconWidth": 47,
-        "discussionPath": "/markdown/discussion-1.md"
+        "discussionPath": "/markdown/discussion-1.md",
+        "hidden": false
     }
 ]

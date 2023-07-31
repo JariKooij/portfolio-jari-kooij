@@ -13,7 +13,7 @@ const ProjectsDisplay: React.FC = () => {
                 </h2>
 
                 {projects.map((project) =>
-                    project.featured ? <ProjectCard key={project.id} project={project} /> : null
+                    project.featured && !project.hidden ? <ProjectCard key={project.id} project={project} /> : null
                 )}
 
                 <ArtProjectCard />

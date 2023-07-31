@@ -9,8 +9,12 @@ type TProps = {
 
 const Specifications: React.FC<TProps> = ({ project }) => {
     return (
-        <div className="ml-small overflow-hidden rounded-l sm:ml-medium lg:ml-0">
-            <div className="flex h-max flex-col gap-12 bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 lg:rounded-t lg:p-8">
+        <div className="ml-small overflow-hidden sm:ml-medium lg:ml-0">
+            <div
+                className={`flex h-max flex-col gap-12 rounded-l bg-transparent-grey px-small py-medium sm:px-medium lg:gap-16 ${
+                    project.demoUrl ? "lg:rounded-t" : "lg:rounded"
+                } lg:p-8`}
+            >
                 <div className="flex items-center justify-between gap-8">
                     <div>
                         <Label>Company</Label>
@@ -32,9 +36,9 @@ const Specifications: React.FC<TProps> = ({ project }) => {
                             {project.contributions.map((item, i) => (
                                 <li
                                     key={item + i}
-                                    className="rounded bg-[#daf6ffa1] p-3 text-14px leading-1 text-black sm:p-4 sm:text-16px"
+                                    className="rounded-lg bg-[#daf6ffa1] p-3 text-14px leading-1 text-black sm:px-4 sm:text-16px"
                                 >
-                                    {item}
+                                    {"//"} {item}
                                 </li>
                             ))}
                         </ul>
@@ -46,7 +50,7 @@ const Specifications: React.FC<TProps> = ({ project }) => {
                             {project.skills.map((item, i) => (
                                 <li
                                     key={item + i}
-                                    className="grow rounded bg-transparent-black p-3 text-center text-14px leading-1 sm:p-4 sm:text-16px"
+                                    className="grow rounded-lg bg-transparent-black p-3 text-center text-14px leading-1 sm:px-4 sm:text-16px"
                                 >
                                     {item}
                                 </li>

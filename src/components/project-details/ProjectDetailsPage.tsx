@@ -34,7 +34,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
                 <div className="flex flex-col gap-16 px-small sm:px-medium lg:px-0">
                     {project.videoUrl && (
                         <div className="flex h-min flex-col justify-between gap-4 lg:flex-row ">
-                            <div className="grow rounded bg-transparent-grey px-8 py-4 sm:py-8">
+                            <div className="grow rounded-lg bg-transparent-grey px-8 py-4 sm:py-8">
                                 <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-4 lg:min-w-max">
                                     <span className="text-24px font-medium">Video</span>
                                     <Image
@@ -47,7 +47,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
                                 </div>
                             </div>
 
-                            <div className="mx-auto w-full max-w-small overflow-hidden rounded-md bg-transparent-black">
+                            <div className="mx-auto w-full max-w-small overflow-hidden rounded-lg bg-transparent-black">
                                 <YoutubeIframe
                                     title={project.title + " - YouTube video"}
                                     vidId={getVideoId(project.videoUrl)}
@@ -58,7 +58,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
 
                     {project.images && (
                         <div className="flex flex-col justify-between gap-4 lg:flex-row">
-                            <div className="grow rounded bg-transparent-black px-8 py-4 sm:py-8">
+                            <div className="grow rounded-lg bg-transparent-black px-8 py-4 sm:py-8">
                                 <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-4 lg:min-w-max">
                                     <span className="text-24px font-medium">
                                         {project.images.length > 1 ? "Images" : "Image"}
@@ -76,7 +76,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
                             <div className="flex w-full max-w-small flex-col gap-8">
                                 {project.images.map((image) => (
                                     <div
-                                        className="relative mx-auto w-full gap-4 overflow-hidden rounded-md"
+                                        className="relative mx-auto w-full gap-4 overflow-hidden rounded-lg"
                                         key={image}
                                     >
                                         <Image
