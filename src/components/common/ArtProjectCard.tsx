@@ -6,7 +6,7 @@ import SkillBubble from "./SkillBubble";
 const ArtProjectCard: React.FC = () => {
     return (
         <article>
-            <div className="group mb-3 rounded bg-transparent-grey p-small_medium lg:p-medium">
+            <div className="group rounded-t bg-transparent-grey p-small_medium lg:p-medium">
                 <div className="flex items-start justify-between gap-6">
                     <div className="mb-2">
                         <h3 className="mb-3 text-20px font-medium">Digital art</h3>
@@ -45,7 +45,7 @@ const ArtProjectCard: React.FC = () => {
 
             <Link
                 href={`/projects/art`}
-                className="flex justify-between rounded bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70 lg:px-8"
+                className="flex justify-between rounded-b bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70 lg:px-8"
             >
                 <span className="text-14px leading-1 sm:text-16px">Learn more</span>
                 <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />
