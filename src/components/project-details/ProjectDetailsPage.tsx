@@ -16,22 +16,24 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
     };
 
     return (
-        <article className="mx-auto mb-mobile_gap flex max-w-full flex-col gap-8 pt-12 sm:mb-desktop_gap lg:gap-16">
-            <h1 className="text-40px font-medium leading-1 sm:text-48px lg:text-64px">{project.title}</h1>
+        <article className="mx-auto mb-12 flex max-w-full flex-col gap-8 pt-12 sm:mb-24 lg:gap-16">
+            <h1 className="px-small text-40px font-medium leading-1 sm:px-medium sm:text-48px lg:px-large lg:text-64px">
+                {project.title}
+            </h1>
 
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-[6fr_4fr]">
                 <Specifications project={project} />
 
                 <div
-                    className="md order-last whitespace-pre-line pt-8 text-14px normal-case tracking-tight [word-spacing:-0.2em] sm:text-16px lg:order-first"
+                    className="md order-last whitespace-pre-line px-small pt-8 text-14px normal-case tracking-tight [word-spacing:-0.2em] sm:px-medium sm:text-16px lg:order-first lg:px-large"
                     dangerouslySetInnerHTML={{ __html: discussion || "" }}
                 />
             </div>
 
-            <div className="flex flex-col gap-16 rounded">
+            <div className="flex flex-col gap-16 px-small sm:px-medium lg:px-large">
                 {project.videoUrl && (
                     <div className="flex h-min flex-col justify-between gap-4 lg:flex-row ">
-                        <div className="grow rounded bg-transparent-grey p-8">
+                        <div className="grow rounded bg-transparent-grey px-8 py-4 sm:py-8">
                             <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-4 lg:min-w-max">
                                 <span className="text-24px font-medium">Video</span>
                                 <Image
@@ -55,7 +57,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
 
                 {project.images && (
                     <div className="flex flex-col justify-between gap-4 lg:flex-row">
-                        <div className="grow rounded bg-transparent-black p-8">
+                        <div className="grow rounded bg-transparent-black px-8 py-4 sm:py-8">
                             <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-4 lg:min-w-max">
                                 <span className="text-24px font-medium">
                                     {project.images.length > 1 ? "Images" : "Image"}

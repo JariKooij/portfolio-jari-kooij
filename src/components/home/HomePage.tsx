@@ -4,7 +4,7 @@ import ProjectsDisplay from "./ProjectsDisplay";
 
 const HomePage: React.FC = () => {
     return (
-        <div>
+        <div className="px-small sm:px-medium lg:px-large">
             <Hero />
             <About />
             <ProjectsDisplay />

@@ -30,14 +30,14 @@ const Layout: React.FC<TProps> = ({ children, font }) => {
 
             <SlideoutNav toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
 
-            <main className="min-h-full px-small pt-navbarHeight sm:px-medium lg:px-large">{children}</main>
+            <main className="min-h-full pt-navbarHeight">{children}</main>
 
             <div id="footer">
                 <Footer />
             </div>
 
             <m.div
-                className="fixed bottom-0 left-0 z-30 h-[2px] w-full origin-left bg-blue opacity-60 "
+                className="fixed bottom-0 left-0 z-30 h-[4px] w-full origin-left bg-blue opacity-60 "
                 style={{ scaleX: scrollYProgress }}
             />
 
