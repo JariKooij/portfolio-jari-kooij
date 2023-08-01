@@ -27,7 +27,7 @@ const ProjectCard: React.FC<TProps> = ({ project }) => {
                     <ul>
                         {project.contributions.map((item) => (
                             <li key={item} className="relative mb-2 flex last-of-type:mb-0">
-                                <div className="rounded-lg bg-[#daf6ffa1] px-4 py-2 text-14px text-black sm:pr-8 sm:text-16px">
+                                <div className="rounded-lg bg-[#daf6ffa1] px-4 py-2 pr-6 text-14px text-black sm:pr-8 sm:text-16px">
                                     {"// " + item}
                                 </div>
 
