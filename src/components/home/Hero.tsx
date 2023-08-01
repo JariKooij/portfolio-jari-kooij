@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import SocialIcons from "../common/SocialIcons";
 import SubTitle from "../ui/SubTitle";
+import Hover from "../common/Hover";
+import ScrollToContent from "./ScrollToContent";
 
 const Hero: React.FC = () => {
     return (
@@ -12,18 +14,17 @@ const Hero: React.FC = () => {
 
             <SubTitle>{"Junior software developer\nSoftware Engineering Student"}</SubTitle>
 
-            <a
-                href={"mailto:jarikooij.dev@gmail.com"}
-                className="mx-auto mt-8 hidden max-w-[96px] hover:underline sm:block"
-            >
-                Nice to meet you!
-            </a>
+            <Hover type="send">
+                <a
+                    href={"mailto:jarikooij.dev@gmail.com"}
+                    className="mx-auto mt-8 hidden max-w-[96px] hover:underline sm:block"
+                >
+                    Nice to meet you!
+                </a>
+            </Hover>
 
             <div className="col-span-2 flex grid-cols-3 items-end sm:grid">
-                <div className="flex items-end">
-                    <p className="hidden max-w-[10ch] leading-4 sm:block">Scroll to learn more</p>
-                    <Image className="mx-2 h-6" src="/icons/scroll.svg" height={24} width={24} alt="scroll" />
-                </div>
+                <ScrollToContent />
 
                 <span className="mx-auto w-24 bg-white lg:h-[1px]" />
 

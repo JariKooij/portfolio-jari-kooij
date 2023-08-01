@@ -6,7 +6,7 @@ import Reveal from "../common/Reveal";
 
 const About: React.FC = () => {
     return (
-        <div className="mx-auto mb-mobile_gap flex  max-w-[635px] flex-col gap-4 sm:mb-desktop_gap">
+        <div className="mx-auto mb-mobile_gap flex  max-w-[635px] flex-col gap-4 sm:mb-desktop_gap" id="about">
             <p className="mb-16 whitespace-pre-wrap text-left text-[14px] [word-spacing:-.36em] sm:text-justify sm:text-base">
                 {aboutText}
             </p>

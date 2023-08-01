@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { scrollToEl } from "@/utils";
+import Hover from "../common/Hover";
 
 type TProps = {
     toggleSlideoutNav: (e: MouseEvent<HTMLDivElement> | null, newState?: boolean | undefined) => void;

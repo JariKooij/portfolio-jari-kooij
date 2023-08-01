@@ -5,6 +5,7 @@ import { ContactFormInput, ValidationResult } from "@/types";
 import { send, validateContactInput } from "@/utils";
 
 import SocialIcons from "../common/SocialIcons";
+import Hover from "../common/Hover";
 import TextInput from "../ui/TextInput";
 import TextAreaInput from "../ui/TextAreaInput";
 import Label from "../ui/Label";
@@ -118,21 +119,29 @@ const Footer: React.FC = () => {
 
                             <div className="max-w-full">
                                 <Label>Email</Label>
-                                <a
-                                    href="mailto:jarikooij.dev@gmail.com"
-                                    target="_blank"
-                                    className="break-all hover:underline"
-                                >
-                                    jarikooij.dev@gmail.com
-                                </a>
+                                <Hover type="send">
+                                    <a
+                                        href="mailto:jarikooij.dev@gmail.com"
+                                        target="_blank"
+                                        className="break-all hover:underline"
+                                    >
+                                        jarikooij.dev@gmail.com
+                                    </a>
+                                </Hover>
                             </div>
                         </div>
 
                         <div className="row-start-2 sm:row-start-auto sm:ml-[-56px] sm:justify-self-center lg:ml-0 lg:justify-self-start">
                             <Label>Location</Label>
-                            <a href="https://goo.gl/maps/bUpqqvxhBzNFQUrn6" target="_blank" className="hover:underline">
-                                Netherlands
-                            </a>
+                            <Hover type="location">
+                                <a
+                                    href="https://goo.gl/maps/bUpqqvxhBzNFQUrn6"
+                                    target="_blank"
+                                    className="hover:underline"
+                                >
+                                    Netherlands
+                                </a>
+                            </Hover>
                         </div>
 
                         <div className="row-span-2 flex flex-col place-items-end gap-3 sm:row-span-1 lg:flex-row">
@@ -194,21 +203,25 @@ const Footer: React.FC = () => {
                 <div className="col-span-2 flex w-full flex-col-reverse items-center justify-between gap-y-medium sm:flex-row sm:items-end">
                     <div className="text-12px">© Jari Kooij - 2023</div>
 
-                    <button
-                        type="submit"
-                        className={`flex w-full items-center justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
-                            loading ? "opacity-50" : ""
-                        }`}
-                    >
-                        <span className="uppercase mix-blend-exclusion">{loading ? "Sending..." : "Sent message"}</span>
-                        <Image
-                            src={"/icons/arrow-right.svg"}
-                            height={13}
-                            width={30}
-                            alt="sent message"
-                            className="mix-blend-exclusion"
-                        />
-                    </button>
+                    <Hover type="send">
+                        <button
+                            type="submit"
+                            className={`flex w-full items-center justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
+                                loading ? "opacity-50" : ""
+                            }`}
+                        >
+                            <span className="uppercase mix-blend-exclusion">
+                                {loading ? "Sending..." : "Sent message"}
+                            </span>
+                            <Image
+                                src={"/icons/arrow-right.svg"}
+                                height={13}
+                                width={30}
+                                alt="sent message"
+                                className="mix-blend-exclusion"
+                            />
+                        </button>
+                    </Hover>
                 </div>
             </form>
         </div>

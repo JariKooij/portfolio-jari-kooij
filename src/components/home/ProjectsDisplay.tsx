@@ -4,6 +4,7 @@ import projects from "@/data/projects.json";
 import ProjectCard from "../common/ProjectCard";
 import ArtProjectCard from "../common/ArtProjectCard";
 import Reveal from "../common/Reveal";
+import Hover from "../common/Hover";
 
 const ProjectsDisplay: React.FC = () => {
     return (
@@ -25,7 +26,10 @@ const ProjectsDisplay: React.FC = () => {
                     <ArtProjectCard />
                 </Reveal>
 
-                <Link href="/projects" className="mx-auto text-14px font-medium hover:underline sm:text-16px">
+                <Link
+                    href="/projects"
+                    className="mx-auto block max-w-max text-14px font-medium hover:underline sm:text-16px"
+                >
                     Show me more!
                 </Link>
             </div>

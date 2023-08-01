@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Project } from "@/types";
 import SkillBubble from "./SkillBubble";
+import Hover from "./Hover";
 
 type TProps = {
     project: Project;
@@ -25,11 +26,14 @@ const ProjectCard: React.FC<TProps> = ({ project }) => {
 
                     <ul>
                         {project.contributions.map((item) => (
-                            <li
-                                key={item}
-                                className="relative mb-2 max-w-max rounded-lg bg-[#daf6ffa1] px-4 py-2 text-14px text-black last-of-type:mb-0 sm:max-w-max sm:text-16px"
-                            >
-                                {"// " + item}
+                            <li key={item} className="relative mb-2 flex last-of-type:mb-0">
+                                <div className="rounded-lg bg-[#daf6ffa1] px-4 py-2 text-14px text-black sm:pr-8 sm:text-16px">
+                                    {"// " + item}
+                                </div>
+
+                                <div className="grow">
+                                    <div className="ml-auto h-full w-[calc(100%-8px)] rounded-lg bg-blue opacity-5" />
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -41,14 +45,21 @@ const ProjectCard: React.FC<TProps> = ({ project }) => {
                     ))}
                 </div>
             </div>
-
-            <Link
-                href={`/projects/${project.id}`}
-                className="flex justify-between rounded-b bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70 lg:px-8"
-            >
-                <span className="text-14px leading-1 sm:text-16px">Learn more</span>
-                <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />
-            </Link>
+            <Hover>
+                <Link
+                    href={`/projects/${project.id}`}
+                    className="group flex justify-between rounded-b bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70  lg:px-8"
+                >
+                    <span className="text-14px leading-1 sm:text-16px">Learn more</span>
+                    <Image
+                        src={"/icons/arrow-right.svg"}
+                        width={30}
+                        height={13}
+                        alt="Explore this project"
+                        className="transition-transform group-hover:translate-x-1"
+                    />
+                </Link>
+            </Hover>
         </article>
     );
 };

@@ -6,6 +6,8 @@ import { motion as m, useScroll } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import SlideoutNav from "@/components/layout/SlideoutNav";
 import Footer from "./Footer";
+import CustomCursor from "../common/CustomCursor";
+import { CursorContextProvider } from "@/context/CursorContext";
 type TProps = {
     font: NextFont;
     children: React.ReactNode;
@@ -26,23 +28,31 @@ const Layout: React.FC<TProps> = ({ children, font }) => {
 
     return (
         <body className={`${font.className}`}>
-            <Navbar toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
+            <CursorContextProvider>
+                <CustomCursor />
 
-            <SlideoutNav toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
+                <Navbar toggleSlideoutNav={toggleSlideoutNav} slideoutEnabled={slideoutEnabled} contactEl={footerEl} />
 
-            <main className="min-h-full pt-navbarHeight">{children}</main>
+                <SlideoutNav
+                    toggleSlideoutNav={toggleSlideoutNav}
+                    slideoutEnabled={slideoutEnabled}
+                    contactEl={footerEl}
+                />
 
-            <div id="footer">
-                <Footer />
-            </div>
+                <main className="min-h-full pt-navbarHeight">{children}</main>
 
-            <m.div
-                className="fixed bottom-0 left-0 z-30 h-[3px] w-full origin-left bg-blue"
-                style={{ scaleX: scrollYProgress }}
-            />
+                <div id="footer">
+                    <Footer />
+                </div>
 
-            <div className="fixed left-1/2 top-0 -z-20 h-[600px] w-[860px] -translate-x-[35%] -translate-y-[52%] rotate-[7deg] rounded-[50%] bg-[#daf6ffb4] blur-[100px]" />
-            <div className="translate-x-300 pointer-events-none fixed inset-0 z-[-10] h-full w-full bg-noise bg-[length:300px_300px] opacity-25" />
+                <m.div
+                    className="fixed bottom-0 left-0 z-30 h-[3px] w-full origin-left bg-blue"
+                    style={{ scaleX: scrollYProgress }}
+                />
+
+                <div className="fixed left-1/2 top-0 -z-20 h-[600px] w-[860px] -translate-x-[35%] -translate-y-[52%] rotate-[7deg] rounded-[50%] bg-[#daf6ffb4] blur-[100px]" />
+                <div className="translate-x-300 pointer-events-none fixed inset-0 z-[-10] h-full w-full bg-noise bg-[length:300px_300px] opacity-25" />
+            </CursorContextProvider>
         </body>
     );
 };

@@ -60,6 +60,9 @@ module.exports = {
             letterSpacing: {
                 huuge: ".75em",
             },
+            transitionProperty: {
+                size: "height, width",
+            },
         },
     },
     plugins: [],

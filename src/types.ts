@@ -24,3 +24,5 @@ export type ContactFormInput = {
     subject: string;
     message: string;
 };
+
+export type LinkType = "send" | "navigate" | "location" | "scroll";

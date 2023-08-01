@@ -64,6 +64,29 @@ body {
     background-color: black;
 }
 
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    85% {
+        transform: rotate(10deg);
+    }
+    95% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle-anim {
+    transform-origin: center;
+    animation: wiggle 2.5s infinite;
+}
+
 .md h1,
 .md h2,
 .md h4,

@@ -33,13 +33,13 @@
         "featured": false,
         "title": "Salesprof",
         "companyName": "Capgemini",
-        "contributions": ["Front-end development", "UX/UI design"],
+        "contributions": ["Front-end development", "Backend development"],
         "skills": ["Next.js", "TypeScript", "SCSS", "Figma"],
         "iconUrl": "/icons/projects/capgemini.svg",
         "iconHeight": 40,
         "iconWidth": 43,
         "discussionPath": "/markdown/discussion-1.md",
-        "hidden": true
+        "hidden": false
     },
     {
         "id": 4,

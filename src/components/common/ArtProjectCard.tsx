@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import SkillBubble from "./SkillBubble";
+import Hover from "./Hover";
 
 const ArtProjectCard: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const ArtProjectCard: React.FC = () => {
                 </div>
 
                 <div className="mb-6 grid grid-cols-3 gap-6">
-                    <div className="relative col-span-3 h-40 overflow-hidden rounded md:col-span-2 md:h-64">
+                    <div className="relative col-span-3 h-40 overflow-hidden rounded-lg md:col-span-2 md:h-64">
                         <Image
                             src={"/images/projects/art/1.jpg"}
                             fill
@@ -23,7 +24,7 @@ const ArtProjectCard: React.FC = () => {
                             className="transition-all duration-1000 group-hover:scale-105"
                         />
                     </div>
-                    <div className="relative hidden overflow-hidden rounded md:block">
+                    <div className="relative hidden overflow-hidden rounded-lg md:block">
                         <Image
                             src={"/images/projects/art/2.jpg"}
                             fill
@@ -42,13 +43,21 @@ const ArtProjectCard: React.FC = () => {
                 </div>
             </div>
 
-            <Link
-                href={`/projects/art`}
-                className="flex justify-between rounded-b bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70 lg:px-8"
-            >
-                <span className="text-14px leading-1 sm:text-16px">Learn more</span>
-                <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />
-            </Link>
+            <Hover>
+                <Link
+                    href={`/projects/art`}
+                    className="group flex justify-between rounded-b bg-transparent-white px-6 py-4 transition-opacity hover:opacity-70 lg:px-8"
+                >
+                    <span className="text-14px leading-1 sm:text-16px">Learn more</span>
+                    <Image
+                        src={"/icons/arrow-right.svg"}
+                        width={30}
+                        height={13}
+                        alt="Explore this project"
+                        className="transition-transform group-hover:translate-x-1"
+                    />
+                </Link>
+            </Hover>
         </article>
     );
 };

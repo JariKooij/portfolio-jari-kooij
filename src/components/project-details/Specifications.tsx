@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Project } from "@/types";
 import Label from "../ui/Label";
 import Link from "next/link";
+import Hover from "../common/Hover";
 
 type TProps = {
     project: Project;
@@ -34,11 +35,14 @@ const Specifications: React.FC<TProps> = ({ project }) => {
                         <Label>Contributions</Label>
                         <ul className="mt-2 flex flex-col gap-2">
                             {project.contributions.map((item, i) => (
-                                <li
-                                    key={item + i}
-                                    className="rounded-lg bg-[#daf6ffa1] p-3 text-14px leading-1 text-black sm:px-4 sm:text-16px"
-                                >
-                                    {"//"} {item}
+                                <li key={item + i} className="flex">
+                                    <div className="rounded-lg bg-[#daf6ffa1] p-3 pr-6 text-14px leading-1 text-black sm:px-4 sm:pr-8 sm:text-16px lg:pr-6">
+                                        {"// " + item}
+                                    </div>
+
+                                    <div className="grow">
+                                        <div className="ml-auto h-full w-[calc(100%-8px)] rounded-lg bg-blue opacity-5" />
+                                    </div>
                                 </li>
                             ))}
                         </ul>
@@ -61,13 +65,22 @@ const Specifications: React.FC<TProps> = ({ project }) => {
             </div>
 
             {project.demoUrl && (
-                <Link
-                    href={project.demoUrl}
-                    className="flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70 md:px-medium lg:mx-0 lg:rounded-b lg:px-8"
-                >
-                    <span className="text-14px leading-1 sm:text-16px">Visit demo</span>
-                    <Image src={"/icons/arrow-right.svg"} width={30} height={13} alt="Explore this project" />
-                </Link>
+                <Hover>
+                    <Link
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="group flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70  md:px-medium lg:mx-0 lg:rounded-b lg:px-8"
+                    >
+                        <span className="text-14px leading-1 sm:text-16px">Visit demo</span>
+                        <Image
+                            src={"/icons/arrow-right.svg"}
+                            width={30}
+                            height={13}
+                            alt="Explore this project"
+                            className="transition-transform group-hover:translate-x-1"
+                        />
+                    </Link>
+                </Hover>
             )}
         </div>
     );
