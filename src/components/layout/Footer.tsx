@@ -201,12 +201,12 @@ const Footer: React.FC = () => {
                     {err && <p className="text-center text-14px text-red-600 sm:text-right">{err}</p>}
                 </div>
                 <div className="col-span-2 flex w-full flex-col-reverse items-center justify-between gap-y-medium sm:flex-row sm:items-end">
-                    <div className="text-12px">© Jari Kooij - 2023</div>
+                    <div className="min-w-max text-12px">© Jari Kooij - 2023</div>
 
                     <Hover type="send">
                         <button
                             type="submit"
-                            className={`flex w-full items-center justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
+                            className={`ml-auto flex w-full items-center justify-between gap-4 rounded bg-white px-4 py-2 transition-opacity hover:opacity-70 focus:outline-none sm:w-max ${
                                 loading ? "opacity-50" : ""
                             }`}
                         >

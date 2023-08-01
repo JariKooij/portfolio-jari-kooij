@@ -16,7 +16,7 @@ const Hover: React.FC<TProps> = ({ children, type = "navigate" }) => {
             onMouseEnter={() => updateHover(true, type)}
             onMouseLeave={() => updateHover(false)}
             onClick={() => updateHover(false)}
-            className="pointer-events-none [&>*]:pointer-events-auto"
+            className="pointer-events-none w-full [&>*]:pointer-events-auto"
         >
             {children}
         </div>

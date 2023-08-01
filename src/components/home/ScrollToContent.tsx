@@ -5,7 +5,8 @@ import Hover from "../common/Hover";
 const ScrollToContent: React.FC = () => {
     const handleScroll = () => {
         const navHeight = 80;
-        const margin = 64 + window.innerHeight / 15;
+        // const margin = 64 + window.innerHeight / 15;
+        const margin = 64;
 
         const content = document.getElementById("about");
         if (!content) return;
