@@ -4,6 +4,7 @@ import SocialIcons from "../common/SocialIcons";
 import SubTitle from "../ui/SubTitle";
 import Hover from "../common/Hover";
 import ScrollToContent from "./ScrollToContent";
+import Reveal from "../common/Reveal";
 
 const Hero: React.FC = () => {
     return (
@@ -23,16 +24,24 @@ const Hero: React.FC = () => {
                 </a>
             </Hover>
 
-            <div className="col-span-2 flex grid-cols-3 items-end sm:grid">
-                <ScrollToContent />
+            <div className="col-span-2 flex grid-cols-3 items-end justify-between sm:grid">
+                <Reveal transition="moveUp">
+                    <ScrollToContent />
+                </Reveal>
 
-                <span className="mx-auto w-24 bg-white lg:h-[1px]" />
+                <Reveal transition="moveUp" delay={0.1}>
+                    <span className="mx-auto w-24 bg-white lg:h-[1px]" />
+                </Reveal>
 
                 <div className="justify-self-end">
-                    <p className="mb-2 text-end">Say Hi!</p>
-                    <div className="flex gap-2">
-                        <SocialIcons />
-                    </div>
+                    <Reveal transition="moveUp" delay={0.2}>
+                        <div>
+                            <p className="mb-2 text-end">Say Hi!</p>
+                            <div className="flex gap-2">
+                                <SocialIcons />
+                            </div>
+                        </div>
+                    </Reveal>
                 </div>
             </div>
         </div>
