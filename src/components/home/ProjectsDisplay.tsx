@@ -26,12 +26,14 @@ const ProjectsDisplay: React.FC = () => {
                     <ArtProjectCard />
                 </Reveal>
 
-                <Link
-                    href="/projects"
-                    className="mx-auto block max-w-max text-14px font-medium hover:underline sm:text-16px"
-                >
-                    Show me more!
-                </Link>
+                <Hover type="navigate-page">
+                    <Link
+                        href="/projects"
+                        className="mx-auto block max-w-max text-14px font-medium hover:underline sm:text-16px"
+                    >
+                        Show me more!
+                    </Link>
+                </Hover>
             </div>
         </>
     );

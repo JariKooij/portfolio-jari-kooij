@@ -16,7 +16,7 @@ const ArtProjectCard: React.FC = () => {
                 <div className="mb-6 grid grid-cols-3 gap-6">
                     <div className="relative col-span-3 h-40 overflow-hidden rounded-lg md:col-span-2 md:h-64">
                         <Image
-                            src={"/images/projects/art/1.jpg"}
+                            src={"/images/projects/art/FLOATING.jpg"}
                             fill
                             sizes={"(max-width: 1320px) 70vw, (max-width: 768px) 200vw, 1200px"}
                             alt={""}
@@ -26,7 +26,7 @@ const ArtProjectCard: React.FC = () => {
                     </div>
                     <div className="relative hidden overflow-hidden rounded-lg md:block">
                         <Image
-                            src={"/images/projects/art/2.jpg"}
+                            src={"/images/projects/art/ISOLATION.jpg"}
                             fill
                             sizes={"(max-width: 1320px) 70vw, 1200px"}
                             alt={""}

@@ -25,4 +25,4 @@ export type ContactFormInput = {
     message: string;
 };
 
-export type LinkType = "send" | "navigate" | "location" | "scroll";
+export type LinkType = "send" | "navigate" | "location" | "scroll" | "navigate-page" | "image" | "close";

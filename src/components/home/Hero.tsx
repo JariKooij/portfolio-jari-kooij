@@ -15,14 +15,16 @@ const Hero: React.FC = () => {
 
             <SubTitle>{"Junior software developer\nSoftware Engineering Student"}</SubTitle>
 
-            <Hover type="send">
-                <a
-                    href={"mailto:jarikooij.dev@gmail.com"}
-                    className="mx-auto mt-8 hidden max-w-[96px] hover:underline sm:block"
-                >
-                    Nice to meet you!
-                </a>
-            </Hover>
+            <Reveal transition="moveUp" delay={0.5}>
+                <Hover type="send">
+                    <a
+                        href={"mailto:jarikooij.dev@gmail.com"}
+                        className="mx-auto mt-8 hidden max-w-[96px] hover:underline sm:block"
+                    >
+                        Nice to meet you!
+                    </a>
+                </Hover>
+            </Reveal>
 
             <div className="col-span-2 flex grid-cols-3 items-end justify-between sm:grid">
                 <Reveal transition="moveUp">
