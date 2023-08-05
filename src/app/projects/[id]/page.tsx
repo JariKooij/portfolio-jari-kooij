@@ -14,13 +14,16 @@ type TProps = {
 };
 
 export const generateStaticParams = async () => {
+    return [];
+
     return projects.map((project) => ({
         id: project.id.toString(),
     }));
 };
 
 const fetchProject = (id: string) => {
-    const project = projects.find((project) => project.id === parseInt(id));
+    // const project = projects.find((project) => project.id === parseInt(id));
+    let project = undefined;
     if (!project) notFound();
 
     return project;
