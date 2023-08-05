@@ -18,7 +18,8 @@ export const metadata: Metadata = {
 };
 
 const Art: React.FC = async () => {
-    const files = await readdir(process.cwd() + "/public/images/projects/art");
+    // const files = await readdir(process.cwd() + "/public/images/projects/art");
+    const files: string[] = [];
     return (
         <PageWrapper>
             <ArtPage files={files} />
