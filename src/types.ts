@@ -26,3 +26,8 @@ export type ContactFormInput = {
 };
 
 export type LinkType = "send" | "navigate" | "location" | "scroll" | "navigate-page" | "image" | "close";
+
+export type HostedImage = {
+    url: string;
+    title: string;
+};

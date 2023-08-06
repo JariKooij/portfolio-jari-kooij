@@ -2,6 +2,7 @@ import ArtPage from "@/components/art/ArtPage";
 import PageWrapper from "@/components/common/PageWrapper";
 import { readdir } from "fs/promises";
 import { Metadata } from "next";
+import images from "@/data/gallery-art-images.json";
 
 export const metadata: Metadata = {
     title: "Digital Art",
@@ -18,10 +19,11 @@ export const metadata: Metadata = {
 };
 
 const Art: React.FC = async () => {
-    const files = await readdir(process.cwd() + "/public/images/art");
+    // const files = await readdir(process.cwd() + "/public/images/art");
+
     return (
         <PageWrapper>
-            <ArtPage files={files} />
+            <ArtPage images={images} />
         </PageWrapper>
     );
 };

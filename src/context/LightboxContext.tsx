@@ -1,3 +1,4 @@
+import { HostedImage } from "@/types";
 import { createContext, useState } from "react";
 
 type PropsType = {
@@ -6,30 +7,30 @@ type PropsType = {
 
 interface IContext {
     active: boolean;
-    image: string;
-    showLightbox: (image: string) => void;
+    image: HostedImage;
+    showLightbox: (image: HostedImage) => void;
     hideLightbox: () => void;
 }
 
 const LightboxContext = createContext<IContext>({
     active: false,
-    image: "",
-    showLightbox: (image: string) => {},
+    image: { url: "", title: "" },
+    showLightbox: (image: HostedImage) => {},
     hideLightbox: () => {},
 });
 
 export const LightboxContextProvider: React.FC<PropsType> = ({ children }) => {
     const [active, setActive] = useState<boolean>(false);
-    const [image, setImage] = useState("");
+    const [image, setImage] = useState<HostedImage>({ url: "", title: "" });
 
-    const showLightbox = (image: string) => {
+    const showLightbox = (image: HostedImage) => {
         setImage(image);
         setActive(true);
     };
 
     const hideLightbox = () => {
         setActive(false);
-        setImage("");
+        setImage({ url: "", title: "" });
     };
 
     const context: IContext = {

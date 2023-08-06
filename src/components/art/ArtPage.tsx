@@ -1,12 +1,13 @@
+import { HostedImage } from "@/types";
 import Reveal from "../common/Reveal";
 import CardClickListener from "./CardClickListener";
 import ImageCard from "./ImageCard";
 
 type TProps = {
-    files: string[];
+    images: HostedImage[];
 };
 
-const ArtPage: React.FC<TProps> = ({ files }) => {
+const ArtPage: React.FC<TProps> = ({ images }) => {
     return (
         <div className="mb-24 px-small sm:mb-mobile_gap sm:px-medium lg:px-large">
             <div className="mx-auto max-w-full">
@@ -15,9 +16,9 @@ const ArtPage: React.FC<TProps> = ({ files }) => {
                 </h1>
 
                 <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-3">
-                    {files.map((file, i) => (
-                        <CardClickListener key={file} index={i} file={file}>
-                            <ImageCard image={file} />
+                    {images.map((image, i) => (
+                        <CardClickListener key={image.url} index={i} image={image}>
+                            <ImageCard image={image} />
                         </CardClickListener>
                     ))}
                 </div>

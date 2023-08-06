@@ -2,7 +2,7 @@
 import { useContext, useEffect } from "react";
 import Image from "next/image";
 import LightboxContext from "@/context/LightboxContext";
-import { AnimatePresence, easeOut, motion as m } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
 import Hover from "../common/Hover";
 
 const Lightbox: React.FC = () => {
@@ -39,7 +39,7 @@ const Lightbox: React.FC = () => {
                             exit={{ y: 20, opacity: 0 }}
                             transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
                         >
-                            {lightboxCtx.image}
+                            {lightboxCtx.image.title}
                         </m.div>
 
                         <m.div
@@ -51,8 +51,8 @@ const Lightbox: React.FC = () => {
                             transition={{ duration: 0.4, ease: "easeInOut", delay: 0.4 }}
                         >
                             <Image
-                                src={`/images/projects/art/${lightboxCtx.image}`}
-                                alt={lightboxCtx.image}
+                                src={lightboxCtx.image.url}
+                                alt={lightboxCtx.image.title}
                                 fill
                                 className="pointer-events-auto -z-10 mx-auto max-w-max"
                                 sizes={"100vw"}

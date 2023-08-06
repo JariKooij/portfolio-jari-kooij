@@ -11,7 +11,10 @@
         "iconWidth": 43,
         "demoUrl": "https://www.google.com",
         "discussionPath": "/markdown/discussion-1.md",
-        "images": ["/images/projects/capgemini/1.jpg", "/images/projects/capgemini/2.jpg"],
+        "images": [
+            "https://storage.googleapis.com/portfolio-jari-kooij/projects/capgemini/homepage-ui.jpg",
+            "https://storage.googleapis.com/portfolio-jari-kooij/projects/capgemini/detailspage-ui.jpg"
+        ],
         "hidden": false
     },
     {
