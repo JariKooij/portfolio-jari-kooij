@@ -18,7 +18,7 @@ const ArtProjectSection: React.FC = () => {
                 </div>
             </Reveal>
 
-            <Reveal transition="moveUp" delay={0.5}>
+            <Reveal transition="moveUp" delay={0.3}>
                 <ArtProjectCard />
             </Reveal>
         </section>
