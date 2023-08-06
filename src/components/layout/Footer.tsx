@@ -211,7 +211,7 @@ const Footer: React.FC = () => {
                             }`}
                         >
                             <span className="uppercase mix-blend-exclusion">
-                                {loading ? "Sending..." : "Sent message"}
+                                {loading ? "Sending..." : "Send message"}
                             </span>
                             <Image
                                 src={"/icons/arrow-right.svg"}
