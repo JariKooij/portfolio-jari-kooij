@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         title: "Projects",
         description: "Some of the projects I worked on recently",
         url: "/projects",
-        siteName: "Portfolio Jari Kooij",
+        siteName: "jarikooij.com",
     },
 };
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         description:
             "Hi there! My name is Jari Kooij, and I am a third year software engineering student at Windesheim University of Applied Sciences and recently started working as a Junior Software Developer at Het Medialab. Let's get in touch!",
         url: "/",
-        siteName: "Portfolio Jari Kooij",
+        siteName: "jarikooij.com",
     },
 };
 

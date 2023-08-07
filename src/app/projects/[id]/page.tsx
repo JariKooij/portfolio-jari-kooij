@@ -41,7 +41,7 @@ export const generateMetadata = async ({ params }: TProps): Promise<Metadata> =>
             title: project.title,
             description: `A discription of the project "${project.title}", to which I contributed`,
             url: `/projects/${project.id}`,
-            siteName: "Portfolio Jari Kooij",
+            siteName: "jarikooij.com",
         },
     };
 };

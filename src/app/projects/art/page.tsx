@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         title: "Digital Art",
         description: `A gallery of digital artworkes I created.`,
         url: `/projects/art`,
-        siteName: "Portfolio Jari Kooij",
+        siteName: "jarikooij.com",
     },
 };
 
