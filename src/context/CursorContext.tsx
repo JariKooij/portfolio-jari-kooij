@@ -22,7 +22,7 @@ export const CursorContextProvider: React.FC<PropsType> = ({ children }) => {
     const [type, setType] = useState<LinkType>();
 
     const updateHover = (enable: boolean, type?: LinkType) => {
-        if ("ontouchstart" in window || navigator.maxTouchPoints) return;
+        // if ("ontouchstart" in window || navigator.maxTouchPoints) return;
 
         type && setType(type);
         setHovering(enable);
