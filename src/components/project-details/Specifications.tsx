@@ -69,7 +69,7 @@ const Specifications: React.FC<TProps> = ({ project }) => {
                     <Link
                         href={project.demoUrl}
                         target="_blank"
-                        className="group flex justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70  md:px-medium lg:mx-0 lg:rounded-b lg:px-8"
+                        className="group flex grow justify-between bg-transparent-white px-4 py-6 transition-opacity hover:opacity-70  md:px-medium lg:mx-0 lg:rounded-b lg:px-8"
                     >
                         <span className="text-14px leading-1 sm:text-16px">Visit demo</span>
                         <Image
