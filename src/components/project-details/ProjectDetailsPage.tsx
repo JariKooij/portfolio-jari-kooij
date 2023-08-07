@@ -59,7 +59,7 @@ const ProjectDetailsPage: React.FC<TProps> = ({ project, discussion }) => {
                     {project.images && (
                         <div className="flex flex-col justify-between gap-4 lg:flex-row">
                             <div className="grow rounded-lg bg-transparent-black p-4 sm:p-8 lg:rounded">
-                                <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-8 lg:min-w-max">
+                                <div className="flex h-min w-full shrink-0 grow items-center justify-between gap-8 lg:w-max">
                                     <span className="text-24px font-medium">
                                         {project.images.length > 1 ? "Images" : "Image"}
                                     </span>
